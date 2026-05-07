@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "Coming soon...",
+    "by": "Dheeraj",
+    "bylink": "https://hackclub.enterprise.slack.com/archives/U0828RTU7FE",
+    "description": "A fun website with 5 hidden easter eggs and CSS bugs to find. Includes console secrets and accessibility challenges.",
+    "thumbnail": "https://sdheeraj.is-a.dev/assets/img/logo.png",
+    "live": "https://sdheeraj.is-a.dev",
+    "code": "https://github.com/17sdheeraj/eggsploit"
+  }
+]

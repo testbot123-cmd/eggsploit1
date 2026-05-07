@@ -27,8 +27,13 @@
     <span></span><span></span><span></span>
   </button>
   <ul class="navlinks" id="navlinks">
-    <li><a href="#how">How It Works</a></li>
-    <li><a href="#grant">Grant System & Rewards</a></li>
+    <li class="navdropdown">
+      <a href="#" class="navdropdowntoggle">How It Works</a>
+      <ul class="dropdownmenu" id="howdropdown">
+        <li><a href="#how">Clubs</a></li>
+        <li><a href="#howi">Individuals</a></li>
+      </ul>
+    </li>
     <li><a href="#examples">Examples</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="https://hackclub.com/slack" target="_blank" rel="noopener noreferrer" class="navcta">Join Slack</a></li>
@@ -106,6 +111,26 @@
           <p>The club leader checks your website and merges your PR. We review it and give grants based on each submission. Clubs can receive food, tools, or transport grants. The club leader, can receive Vercel credits, domain credits, and more.</p>
           <div class="stepnum" style="color: rgba(236,55,80,0.06)">04</div>
         </div>
+        <div class="stepcard stepgrantcard">
+          <div class="stepid">GRANTS</div>
+          <h3>Grant System</h3>
+          <div class="grantinfo">
+            <p><strong>How much can you get?</strong></p>
+            <ul>
+              <li>3 easter eggs, 5 bugs, 1+ hour = $5</li>
+              <li>6 easter eggs, 10 bugs, 2+ hours = $10</li>
+              <li>Clubs can earn up to $50 for food, tools,etc.</li>
+              <li>Club leaders can get up to $15 for Vercel/domain credits(seperate)</li>
+            </ul>
+            <p style="margin-top: 14px;"><strong>What's available?</strong></p>
+            <ul>
+              <li>Clubs: Food or tools grants</li>
+              <li>Leaders: Vercel credits, domain credits, food grants</li>
+              <li>Other requests subject to approval</li>
+            </ul>
+          </div>
+          <div class="stepnum" style="color: rgba(236,55,80,0.06)">$</div>
+        </div>
       </div>
     </div>
   </section>
@@ -141,37 +166,37 @@
           <p>We will review your submission and give you a grant based on how many bugs and easter eggs you implemented, plus time spent. Individuals can receive Vercel credits, domain credits, food grants, and more.</p>
           <div class="stepnum" style="color: rgba(236,55,80,0.06)">04</div>
         </div>
+        <div class="stepcard stepgrantcard">
+          <div class="stepid">GRANTS</div>
+          <h3>Grant System & Bonus</h3>
+          <div class="grantinfo">
+            <p><strong>How much can you get?</strong></p>
+            <ul>
+              <li>3 easter eggs, 5 bugs, 1+ hour = $5</li>
+              <li>6 easter eggs, 10 bugs, 2+ hours = $10</li>
+              <li>Individuals can get up to $15 for rewards</li>
+            </ul>
+            <p style="margin-top: 14px;"><strong>Bonus: Club Usage Grants</strong></p>
+            <ul>
+              <li>Make detailed, polished websites!</li>
+              <li>Earn $1-2 extra every time a club uses your site</li>
+              <li>Your site might be featured in our gallery</li>
+              <li>Help clubs use your site while getting paid more</li>
+            </ul>
+          </div>
+          <div class="stepnum" style="color: rgba(236,55,80,0.06)">$</div>
+        </div>
       </div>
     </div>
   </section>
 
   <div class="scanline"></div>
 
-  <section class="sectionalt" id="grant">
+  <section class="sectionalt" id="gallery">
     <div class="sectioninner">
-      <div class="sectionlabel">Grant System & Rewards</div>
-      <div class="notes">
-        <div class="notecard">
-          <h3>How much can I get as grant?</h3>
-          <p>There is a tiered system based on the number and complexity of bugs implemented/found, easter eggs implemented/found, and the time spent on the project.</p>
-          <ul>
-            <li>3 easter eggs, 5 bugs, and at least 1 hour = 5$</li>
-            <li>6 easter eggs, 10 bugs, and 2 hours = 10$</li>
-            <li>And so on, based on complexity and effort</li>
-            <li>Clubs can bag upto 50$ for food, tools grant, etc</li>
-            <li>Individual submissions/club leader can bag upto 15$ for Vercel credits, domain credits, food grants, etc</li>
-          </ul>
-        </div>
-        <div class="notecard">
-          <h3>What can I get?</h3>
-          <p>Rewards depend on your submission type and approval. If you want something else, put other in the form and it will be reviewed.</p>
-          <ul>
-            <li>Clubs: food or tools grants</li>
-            <li>Individuals and club leaders: Vercel credits, domain credits, food grants, and more</li>
-            <li>Other requests are subject to approval</li>
-          </ul>
-        </div>
-      </div>
+      <div class="sectionlabel">Featured Websites</div>
+      <p class="desctext">Check out awesome websites built by our community. From clubs and individuals - featuring their best easter eggs and bugs!</p>
+      <a href="gallery.html" class="btn btnprimary" style="margin-top: 20px;">View Gallery</a>
     </div>
   </section>
 
@@ -210,6 +235,26 @@
           <p>Missing alt text, no keyboard navigation, bad contrast. Real bugs that members can learn to fix properly.</p>
         </div>
         <div class="ideacard">
+          <span class="ideatag" style="background:#ff8c37">FUN</span>
+          <div class="ideatitle">Rickroll button</div>
+          <p>A button that looks innocent but redirects to a rickroll video. Classic rickroll easter egg that's both fun and tricky to find.</p>
+        </div>
+        <div class="ideacard">
+          <span class="ideatag" style="background:#33d6a6">AUDIO</span>
+          <div class="ideatitle">Sounds</div>
+          <p>Add audio hints, achievement sounds, or funny messages when they do something in the site.</p>
+        </div>
+        <div class="ideacard">
+          <span class="ideatag" style="background:#8b4dd6">EASTER EGG</span>
+          <div class="ideatitle">Konami code</div>
+          <p>Trigger something cool with the Konami code (↑ ↑ ↓ ↓ ← → ← → B A).</p>
+        </div>
+        <div class="ideacard">
+          <span class="ideatag" style="background:#f39c12">TRICK</span>
+          <div class="ideatitle">Click me repeatedly</div>
+          <p>A button that does something special after clicking it 5, 10, or 20 times. Users have to figure out the magic number.</p>
+        </div>
+        <div class="ideacard">
           <span class="ideatag">ANY</span>
           <div class="ideatitle">Other</div>
           <p>These are just a few stuff that might be there. The weirder the website, the better and fun.</p>
@@ -242,7 +287,7 @@
         </div>
         <div class="notecard">
           <h3>What do individuals need to submit?</h3>
-          <p>For individual submissions, the website must be fully made and brand new. It should contain at least 3 easter eggs, 5 bugs, and 1 hour spent. The list of bugs and easter eggs should be clearly listed in your README.md, and you must also have a fixed version of the site.</p>
+          <p>For individual submissions, the website must be fully made and brand new. It should contain at least 3 easter eggs, 5 bugs, and 1 hour spent. The list of bugs and easter eggs should be clearly listed in your README.md, and you must also have a fixed version of the site. Please note that your submission can be used by clubs, you will get additional grant if used so make sure your websites are high quality and fun!</p>
         </div>
         <div class="notecard" style="border-color: rgba(236,55,80,0.25)">
           <h3>What's the reward?</h3>
@@ -254,6 +299,32 @@
 </main>
 
 <div class="glitchbar"></div>
+
+<div class="eggnoticeoverlay" id="eggnoticeoverlay">
+  <div class="eggnoticebox">
+    <div class="eggnoticehead">
+      <h2>Easter Eggs found!</h2>
+      <button class="eggnoticeclose" id="eggnoticeclose" type="button" aria-label="Close notice">✕</button>
+    </div>
+    <div class="eggnoticebody">
+      <p>There are a few hidden easter eggs on this website.</p>
+      <p>Reveal hints one at a time or do it later by clicking on egg emoji at navbar.</p>
+      <div class="eggnoticebtnrow">
+        <button class="btn btnprimary" id="eggrevealbtn">Reveal</button>
+        <button class="btn btnoutline" id="egglaterbtn">Later</button>
+      </div>
+      <div class="egghints" id="egghints" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(236,55,80,0.2);">
+        <p><strong>Here's what to look for:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 10px; color: #8492a6; font-size: 14px;">
+          <li class="egghintsitem" style="opacity: 0; transition: opacity .3s;">Open the browser console to see the logs</li>
+          <li class="egghintsitem" style="opacity: 0; transition: opacity .3s;">Click the egg logo repeatedly (5 times)</li>
+          <li class="egghintsitem" style="opacity: 0; transition: opacity .3s;">Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A)</li>
+          <li class="egghintsitem" style="opacity: 0; transition: opacity .3s;">Inspect the footer for hidden elements (chicken emoji lol)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer id="footer">
   <div class="footinner">

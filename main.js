@@ -12,12 +12,28 @@ if (toggle && navlinks) {
   })
 
   navlinks.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      navlinks.classList.remove('open')
-      toggle.setAttribute('aria-expanded', 'false')
+    link.addEventListener('click', function(e) {
+      if (!link.classList.contains('navdropdowntoggle')) {
+        navlinks.classList.remove('open')
+        toggle.setAttribute('aria-expanded', 'false')
+      }
     })
   })
 }
+
+var navdropdowns = document.querySelectorAll('.navdropdown')
+navdropdowns.forEach(function(dropdown) {
+  var toggle = dropdown.querySelector('.navdropdowntoggle')
+  var menu = dropdown.querySelector('.dropdownmenu')
+  if (toggle && menu) {
+    toggle.addEventListener('click', function(e) {
+      if (window.innerWidth <= 600) {
+        e.preventDefault()
+        menu.style.display = menu.style.display === 'none' ? 'block' : 'none'
+      }
+    })
+  }
+})
 
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
   anchor.addEventListener('click', function(e) {
@@ -110,7 +126,6 @@ function doegg(type) {
   }
 }
 
-
 var eggicon = document.querySelector('.eggiconlol')
 var eggclicks = 0
 var eggcrackingaudio = new Audio('/assets/egg-cracking.mp3')
@@ -202,3 +217,73 @@ setInterval(function() {
     setTimeout(function() { document.title = originaltitle }, 200)
   }
 }, 4000)
+
+var eggnoticeoverlay = document.getElementById('eggnoticeoverlay')
+var eggnoticeclose = document.getElementById('eggnoticeclose')
+var eggrevealbtn = document.getElementById('eggrevealbtn')
+var egglaterbtn = document.getElementById('egglaterbtn')
+var egghints = document.getElementById('egghints')
+var hintIndex = 0
+
+if (eggnoticeoverlay) {
+  setTimeout(function() {
+    requestAnimationFrame(function() {
+      eggnoticeoverlay.classList.add('show')
+    })
+  }, 1000)
+}
+
+if (eggnoticeclose) {
+  eggnoticeclose.addEventListener('click', function() {
+    eggnoticeoverlay.classList.remove('show')
+  })
+}
+
+if (eggrevealbtn) {
+  eggrevealbtn.addEventListener('click', function() {
+    if (!egghints) return
+    var items = egghints.querySelectorAll('.egghintsitem')
+    if (hintIndex === 0) {
+      egghints.style.display = 'block'
+      eggrevealbtn.textContent = 'Reveal Next'
+    }
+    if (hintIndex < items.length) {
+      var item = items[hintIndex]
+      item.style.opacity = '0'
+      requestAnimationFrame(function() {
+        item.style.opacity = '1'
+      })
+      hintIndex++
+      if (hintIndex >= items.length) {
+        eggrevealbtn.textContent = 'All Revealed'
+        eggrevealbtn.disabled = true
+      }
+    }
+  })
+}
+
+if (egglaterbtn) {
+  egglaterbtn.addEventListener('click', function() {
+    var navlinks = document.getElementById('navlinks') || document.querySelector('.navlinks')
+    if (navlinks && !document.querySelector('.nav-easter')) {
+      var li = document.createElement('li')
+      li.className = 'nav-easter'
+      li.innerHTML = '<a href="#" class="nav-easter-link" aria-label="Easter Eggs">🥚</a>'
+      navlinks.appendChild(li)
+      var link = li.querySelector('a')
+      link.addEventListener('click', function(e) {
+        e.preventDefault()
+        eggnoticeoverlay.classList.add('show')
+      })
+    }
+    eggnoticeoverlay.classList.remove('show')
+  })
+}
+
+if (eggnoticeoverlay) {
+  eggnoticeoverlay.addEventListener('click', function(e) {
+    if (e.target === eggnoticeoverlay) {
+      eggnoticeoverlay.classList.remove('show')
+    }
+  })
+}

@@ -418,9 +418,15 @@ h1 {
   transition: border-color .2s, transform .15s;
   overflow: hidden;
 }
+
 .stepcard:hover {
   border-color: #ec3750;
   transform: translateY(-2px);
+}
+
+.stepgrantcard {
+  background: linear-gradient(135deg, rgba(236,55,80,0.08) 0%, rgba(51,214,166,0.04) 100%);
+  border-top-color: #ec3750;
 }
 
 .stepid {
@@ -696,4 +702,250 @@ a:focus-visible, button:focus-visible {
   .tblink { animation: none; }
   .scanline::after { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+.navdropdown {
+  position: relative;
+}
+
+.navdropdowntoggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navdropdowntoggle::after {
+  content: '▼';
+  font-size: 8px;
+  transition: transform .2s;
+}
+
+.navdropdown:hover .navdropdowntoggle::after {
+  transform: rotate(180deg);
+}
+
+.dropdownmenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #111118;
+  border: 1px solid rgba(236,55,80,0.15);
+  border-radius: 8px;
+  list-style: none;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+  z-index: 101;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  min-width: 160px;
+}
+
+.navdropdown:hover .dropdownmenu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdownmenu li {
+  display: block;
+}
+
+.dropdownmenu a {
+  display: block;
+  padding: 10px 16px;
+  color: #8492a6;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color .15s, background .15s;
+}
+
+.dropdownmenu a:hover {
+  color: #fff;
+  background: rgba(236,55,80,0.08);
+}
+
+.dropdownmenu li:first-child a {
+  border-radius: 8px 8px 0 0;
+}
+
+.dropdownmenu li:last-child a {
+  border-radius: 0 0 8px 8px;
+}
+
+.grantinfo {
+  font-size: 13px;
+  color: #8492a6;
+  line-height: 1.6;
+}
+
+.grantinfo ul {
+  margin: 10px 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.grantinfo li {
+  margin: 6px 0;
+}
+
+.grantinfo strong {
+  color: #fff;
+  display: block;
+  margin-top: 10px;
+}
+
+.eggnoticeoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+  backdrop-filter: blur(4px);
+}
+
+.eggnoticeoverlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.eggnoticebox {
+  background: #111118;
+  border: 2px solid #ec3750;
+  border-radius: 12px;
+  max-width: 480px;
+  width: min(90vw, 480px);
+  box-shadow: 0 8px 48px rgba(236,55,80,0.3);
+  animation: eggnoticein .4s ease-out;
+}
+
+@keyframes eggnoticein {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.eggnoticehead {
+  padding: 24px;
+  border-bottom: 1px solid rgba(236,55,80,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.eggnoticehead h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+}
+
+.eggnoticeclose {
+  background: none;
+  border: none;
+  color: #8492a6;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color .2s;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eggnoticeclose:hover {
+  color: #ec3750;
+}
+
+.eggnoticebody {
+  padding: 24px;
+}
+
+.eggnoticebody p {
+  color: #8492a6;
+  font-size: 15px;
+  margin: 12px 0;
+}
+
+.eggnoticebtnrow {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.egghints ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.egghints li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(236,55,80,0.1);
+}
+
+.egghints li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .dropdownmenu {
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-left: 12px;
+    margin-top: 4px;
+  }
+
+  .navdropdown:hover .dropdownmenu {
+    opacity: 1;
+  }
+
+  .dropdownmenu a {
+    padding: 8px 12px;
+    padding-left: 28px;
+    font-size: 13px;
+  }
+
+  .navdropdowntoggle::after {
+    display: none;
+  }
+
+  .eggnoticebox {
+    margin: 20px;
+  }
+
+  .eggnoticehead {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .eggnoticeclose {
+    align-self: flex-end;
+    margin-top: -8px;
+  }
+
+  .eggnoticebtnrow {
+    flex-direction: column;
+  }
+
+  .eggnoticebtnrow .btn {
+    width: 100%;
+  }
 }
