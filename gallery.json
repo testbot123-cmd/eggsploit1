@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "title": "Coming soon...",
+    "title": "ByteBrew",
     "by": "Dheeraj",
     "bylink": "https://hackclub.enterprise.slack.com/archives/U0828RTU7FE",
-    "description": "A fun website with 5 hidden easter eggs and CSS bugs to find. Includes console secrets and accessibility challenges.",
-    "thumbnail": "https://sdheeraj.is-a.dev/assets/img/logo.png",
-    "live": "https://sdheeraj.is-a.dev",
-    "code": "https://github.com/17sdheeraj/eggsploit"
+    "description": "A demo site (coffee shop site for devs) made for eggsploit",
+    "thumbnail": "https://cdn.hackclub.com/019e0601-bcc9-7eec-8b9e-99c5ceb8e97e/image.png",
+    "live": "https://demo.eggsploit.sdheeraj29.xyz",
+    "code": "https://github.com/17sdheeraj/eggsploitdemo"
   }
 ]
