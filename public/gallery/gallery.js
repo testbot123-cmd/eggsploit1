@@ -51,7 +51,7 @@ function rendergallery() {
   }
 }
 
-fetch('./gallery.json')
+fetch('gallery/gallery.json')
   .then(function(response) {
     if (!response.ok) throw new Error('Failed to load gallery data')
     return response.json()
