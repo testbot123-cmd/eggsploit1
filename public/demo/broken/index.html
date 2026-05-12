@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ByteBrew - Fuel for Hackclubbers</title>
+  <meta name="description" content="ByteBrew is a fictional coffee shop for developers built for Eggsploit.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%98%95</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="navlogo" href="#">ByteBrew</a>
+  <button class="menutoggle" id="menutoggle">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="navright" id="navright">
+    <a href="#menu">menu</a>
+    <a href="#about">about</a>
+    <a href="#reviews">reviews</a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">order</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>code runs on coffee.</h1>
+  <p>ByteBrew is a coffee shop for people who code. every drink is named after a programming thing. this is not real and we are not responsible for any caffeine-related incidents.</p>
+  <div class="herobtns">
+    <a href="#menu" class="btn">see the menu</a>
+    <a href="#order" class="btnalt">order something</a>
+  </div>
+  <p class="heronote">an eggsploit demo site -> pullquests -> hack club</p>
+</div>
+
+<!-- flag{you_read_the_source_code} -->
+
+<section id="menu">
+  <h2>the menu</h2>
+  <p class="sectiondesc">all our drinks. prices are fake obviously, the drink names and ideas are given by chatgpt</p>
+  <div class="drinks">
+    <div class="drink">
+      <div class="drinktop">
+        <h3>The Boolean</h3>
+        <span class="price">$4.50</span>
+      </div>
+      <p>Black or white. No in between. Double shot espresso, pure and simple.</p>
+      <button class="addbtn" data-item="The Boolean" data-price="4.50">add to cart</button>
+    </div>
+    <div class="drink">
+      <div class="drinktop">
+        <h3>Null Pointer</h3>
+        <span class="price">$5.75</span>
+      </div>
+      <p>Vanilla latte with oat milk. Smooth enough to make you forget your bugs.</p>
+      <button class="addbtn" data-item="Null Pointer" data-price="5.75">add to cart</button>
+    </div>
+    <div class="drink popular">
+      <div class="drinktop">
+        <h3>Stack Overflow</h3>
+        <span class="price">$6.00</span>
+      </div>
+      <span class="populartag">popular</span>
+      <p>Triple shot mocha with whipped cream piled way too high. You asked for it.</p>
+      <button class="addbtn" data-item="Stack Overflow" data-price="6.00">add to cart</button>
+    </div>
+    <div class="drink">
+      <div class="drinktop">
+        <h3>404 Brew</h3>
+        <span class="price">$3.50</span>
+      </div>
+      <p>Green tea. Because sometimes what you're looking for was never coffee at all.</p>
+      <button class="addbtn" data-item="404 Brew" data-price="0">add to cart</button>
+    </div>
+    <div class="drink">
+      <div class="drinktop">
+        <h3>The Recursion</h3>
+        <span class="price">$7.00</span>
+      </div>
+      <p>Caramel macchiato. So good you keep ordering it again. And again. And again.</p>
+      <button class="addbtn" data-item="The Recursion" data-price="7.00">add to cart</button>
+    </div>
+    <div class="drink" style="display:none;">
+      <div class="drinktop">
+        <h3>Merge Conflict</h3>
+        <span class="price">$5.00</span>
+      </div>
+      <p>Half chai(from india), half coffee. Two worlds collide in your cup. Somehow works.</p>
+      <button class="addbtn" data-item="Merge Conflict" data-price="5.00">add to cart</button>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="aboutsection">
+  <h2>about bytebrew</h2>
+  <div class="aboutblocks">
+    <div class="aboutblock">
+      <h3>the origin</h3>
+      <p>ByteBrew started in hack club especially for #sleep-deprivation channel people so they can stay awake all night and code.</p>
+    </div>
+    <div class="aboutblock">
+      <h3>open source beans</h3>
+      <p>Our recipes are open source obviously, have an idea? Submit a PR! and we will be glad to add it to our menu.</p>
+    </div>
+    <div class="aboutblock">
+      <h3>shipping daily</h3>
+      <p>We ship fresh beans every single day. No downtime. No maintenance windows.</p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <h2>what people said</h2>
+  <p class="sectiondesc">fake reviews from hack club hackclubbers (if youre name is on here sorry lol)</p>
+  <div class="reviewlist">
+    <div class="review" id="review1">
+      <p>"The Boolean fixed my production bug. Or maybe I just finally had enough caffeine to think straight. Either way, 10/10 cuz sleep is optional"</p>
+      <span class="reviewwho">- @felixgao, FD + newspaper chief editor</span>
+    </div>
+    <div class="review" id="review2">
+      <p>"I ordered the Stack Overflow and the whipped cream literally overflowed from my cup."</p>
+      <span class="reviewwho">- @jps, clubs operation lead</span>
+    </div>
+    <div class="review" id="review3">
+      <p>"Tried the Merge Conflict. My taste buds had conflicts too but it resolved itself after the second sip."</p>
+      <span class="reviewwho">- @maxstellar, '26 summer intern, and more</span>
+    </div>
+    <div class="review" id="review4" data-secret="flag{inspect_the_elements}">
+      <p>"The Recursion is dangerously good. I ordered it 4 times in one sitting and worked on the infra so much that I ended up doing a months work in a day."</p>
+      <span class="reviewwho">- @3kh0 (the fox)(aka roro/rowan), the hack club back hand (infra and more)</span>
+    </div>
+  </div>
+</section>
+
+<section id="order" class="ordersection">
+  <h2>place an order</h2>
+  <p class="sectiondesc">fill it out. we will pretend to make it.</p>
+  <div class="orderwrap">
+    <div class="orderform">
+      <label>name</label>
+      <input type="text" id="ordername" placeholder="your name">
+      <label>email</label>
+      <input type="text" id="orderemail" placeholder="you@email.com">
+      <label>notes</label>
+      <textarea id="ordernotes" rows="3" placeholder="extra foam, no bugs please"></textarea>
+      <button class="btn" id="submitorder">place order</button>
+      <p class="ordermsg" id="ordermsg"></p>
+    </div>
+    <div class="cart">
+      <h3>your cart</h3>
+      <div class="cartlist" id="cartlist">
+        <p class="cartempty">nothing here yet, add some stuff to the cart</p>
+      </div>
+      <div class="carttotal" id="carttotal">total: $0.00</div>
+      <button class="btnalt clearbtn" id="clearcart">clear cart</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footcontent">
+    <p>ByteBrew - an <a href="https://eggsploit.hackclub.com" target="_blank">eggsploit</a> demo for <a href="https://pullquests.hackclub.com" target="_blank">pullquests</a></p>
+    <div class="footlinks">
+      <a href="https://github.com/hackclub" target="_blank">github</a>
+      <a href="https://hackclub.com/slack" target="_blank">slack</a>
+      <a href="https://hackclub.com" target="_blank">hackclub.com</a>
+    </div>
+    <span class="secretdot" id="secretdot">.</span>
+  </div>
+</footer>
+
+<div class="popup" id="popup">
+  <div class="popupbox">
+    <h3>you found the secret invisible bean</h3>
+    <p>there is a tiny dot in the footer which is invisible. you clicked it. congrats, you are either very observant or very bored.</p>
+    <button class="btn" id="popupclose">nice</button>
+  </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
