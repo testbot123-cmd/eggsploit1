@@ -6,7 +6,7 @@
     "bylink": "https://hackclub.enterprise.slack.com/archives/U0828RTU7FE",
     "description": "A demo site (coffee shop site for devs) made for eggsploit",
     "thumbnail": "https://cdn.hackclub.com/019e0601-bcc9-7eec-8b9e-99c5ceb8e97e/image.png",
-    "live": "https://demo.eggsploit.sdheeraj29.xyz",
-    "code": "https://github.com/17sdheeraj/eggsploitdemo"
+    "live": "https://eggsploit.hackclub.com/demo",
+    "code": "https://github.com/hackclub/eggsploit/tree/main/public/demo"
   }
 ]
